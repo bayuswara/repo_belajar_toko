@@ -16,9 +16,9 @@ class CreateProductTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id_product');
             $table->string('nama_product');
-            $table->text('alamat');
-
-            $table->foreign('id_customer')->references('id_customer')->on('customer');
+            
+            $table->unsignedBigInteger('id_order');
+            $table->foreign('id_order')->references('id_order')->on('orders');
         });
     }
 

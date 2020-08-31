@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/customers','CustomersController@show');
+Route::post('/customers','CustomersController@store');
+
+Route::get('/product','ProductController@show');
+Route::get('/product/{id_product}','ProductController@detail');
+Route::post('/product','ProductController@store');
+
+Route::get('/orders','OrdersController@show');
+Route::get('/orders/{id_order}','OrdersController@detail');
+Route::post('/orders','OrdersController@store');

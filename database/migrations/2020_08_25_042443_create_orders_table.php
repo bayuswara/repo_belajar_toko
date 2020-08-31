@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id_order');
             $table->string('nama_order');
             $table->date('tanggal_order');
-            $table->text('alamat');
+            
             $table->unsignedBigInteger('id_customer');
 
             $table->foreign('id_customer')->references('id_customer')->on('customer');
