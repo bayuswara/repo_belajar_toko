@@ -22,7 +22,9 @@ Route::post('/customers','CustomersController@store');
 Route::get('/product','ProductController@show');
 Route::get('/product/{id_product}','ProductController@detail');
 Route::post('/product','ProductController@store');
+Route::put('/product/{id_product}','ProductController@update');
 
 Route::get('/orders','OrdersController@show');
 Route::get('/orders/{id_order}','OrdersController@detail');
 Route::post('/orders','OrdersController@store');
+Route::put('/orders/{id_order}','OrdersController@update');
